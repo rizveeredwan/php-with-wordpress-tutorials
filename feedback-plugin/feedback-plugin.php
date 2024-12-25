@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Interactive Feedback Page Plugin
+Plugin Name: feedback-plugin
 Description: A plugin to create a custom interactive page for feedback submissions and display.
 Version: 1.0
 Author: Redwan Ahmed Rizvee

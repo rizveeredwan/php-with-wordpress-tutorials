@@ -1,6 +1,6 @@
 <?php // php block start
 /*
-Plugin Name: Simple Communication Plugin
+Plugin Name: simple-plugin
 Plugin URI: https://example.com/
 Description: A simple plugin for communication with WordPress.
 Version: 1.0
