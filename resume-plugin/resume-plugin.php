@@ -11,7 +11,7 @@ function resume_page_plugin_activate() {
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php'); // importing library function  
 
     // Register rewrite rules for the custom page
-    add_rewrite_rule('^my-resume$', 'index.php?resume=1', 'top');
+    add_rewrite_rule('^my-resume$', 'index.php', 'top');
     // add_rewrite_rule(page-url, which-php-file.php?query-paramater=value, where-this-rule-will-be-entered)
     flush_rewrite_rules(); // flush the rule for updating the page 
 }
@@ -34,10 +34,8 @@ add_filter('query_vars', 'resume_page_query_vars');
 
 // Step 4: Display content on the custom page
 function resume_page_template_redirect() {
-    if (get_query_var('resume')) { //trying to match if our given query is resume 
-        resume_page_display(); // if it is, we are calling the function resume_page_display() 
-        exit; // exiting of this function 
-    }
+    resume_page_display(); // if it is, we are calling the function resume_page_display() 
+    exit; // exiting of this function 
 }
 // a new template is called using the function feedback_page_template_redirect
 add_action('template_redirect', 'resume_page_template_redirect');
